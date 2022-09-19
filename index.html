@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="src/styles.css"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    
+  </head>
+
+  <body>
+
+    <div class = "container">
+      <div class="weather-app">
+
+        <form id = "search-form">
+           
+          <div class="row">
+            <div class="col-9">
+          <input id = "city-input" 
+          type="search" 
+          id = "form1"
+          class = "form-control"
+          placeholder="Enter city"
+          />
+            </div>
+          
+            <input type = "submit" value = "search"
+          class="form-control col-3"/>
+          </div>
+        
+        </form>
+
+      <h1 id="city">Las Vegas</h1>
+      <ul>
+        <li id="date">
+        </li>
+        <li>
+          Sunny skies
+        </li>
+      </ul>
+      
+      <div class="row">
+        <div class="col-6">
+          <div class="clearfix">
+          <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sun icon" class="weather-icon float-left"/>
+
+          <div class="float-left">
+          <span class= "temperature" id = "temperature">90</span>
+          <span class"units"><a href ="#" id="fahrenheit-link">°F |  
+            <a href ="#" id=celsius-link""> °C </a></span>
+        </div>
+      </div>
+    </div>
+          <div class="col">
+            <ul>
+
+              <li id = "precipitation">
+                Precipitation:
+              </li>
+
+              <li id = "humidity">
+                Humiditiy:
+              </li>
+
+              <li id = "wind">
+                Wind:
+              </li>
+            </ul>
+        </div>
+      </div>
+
+      <h3>
+          <div class="days">
+              <div class="row">
+                <div class="col">
+                  Sun
+                </div>
+                <div class="col">
+                  Mon
+                </div>
+                <div class="col">
+                  Tues
+                </div>
+                <div class="col">
+                  Weds
+                </div>
+              </div>
+            </div>
+
+            <div class="temp">
+              <div class="row">
+                <div class="col">
+                  75°F
+      
+                </div>
+                <div class="col">
+                  75°F
+      
+                </div>
+                <div class="col">
+                  75°F
+      
+                </div>
+                <div class="col">
+                  75°F
+      
+                </div>
+              </div>
+            </div>
+
+            <div class="emojis-weather">
+              <div class="row">
+                <div class="col">
+                  🌤
+                </div>
+                <div class="col">
+                  🌤
+                </div>
+                <div class="col">
+                  🌥
+                </div>
+                <div class="col">
+                  ☁️
+                </div>
+              </div>
+            </div>
+          </h3>
+
+
+  </body>
+
+
+  <script src="src/index.js"></script>
+
+</html>
