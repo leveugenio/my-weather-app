@@ -29,31 +29,37 @@
           id = "form1"
           class = "form-control"
           placeholder="Enter city"
+          autocomplete="off"
           />
             </div>
+            <div class="col-3">
           
-            <input type = "submit" value = "search"
-          class="form-control col-3"/>
+            <input 
+            type = "submit" 
+            value = "search"
+            class="btn btn-primary w-100"/>
           </div>
-        
+        </div>
         </form>
 
+        <div class="overview">
+          
       <h1 id="city">Las Vegas</h1>
       <ul>
-        <li id="date">
-        </li>
-        <li>
-          Sunny skies
-        </li>
+        <li>Last Updated: <span id="date"></span></li>
+        <li id = "description"></li>
+        <li id="date"></li>
       </ul>
+      </div>
       
       <div class="row">
         <div class="col-6">
-          <div class="clearfix">
+          <div class="clearfix weather-temperature">
           <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" 
-          alt="sun icon" 
+          alt="Clear" 
           id= "icon" 
-          class="weather-icon float-left"/>
+          class="float-left"/>
+
 
           <div class="float-left">
           <span class= "temperature" id = "temperature">90</span>
@@ -62,23 +68,19 @@
         </div>
       </div>
     </div>
-          <div class="col">
+          <div class="col-6">
             <ul>
-
-              <li id = "precipitation">
-                Precipitation:
-              </li>
 
               <li id = "humidity">
                 Humiditiy:
               </li>
-
               <li id = "wind">
                 Wind:
               </li>
             </ul>
         </div>
       </div>
+   
 
       <h3>
           <div class="days">
@@ -135,6 +137,14 @@
                 </div>
               </div>
             </div>
+            </div>
+           <div class="weather-forecast"
+      id="forecast">
+    </div>
+
+    <small>
+      Open Source
+    </small> 
           </h3>
 
 
