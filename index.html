@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
     <title>Weather App</title>
     <meta charset="UTF-8" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -12,90 +11,76 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    
   </head>
 
   <body>
-
-    <div class = "container">
+    <div class="container">
       <div class="weather-app-wrapper">
-        <div class = "weather-app">
-
-        <form id = "search-form">
-           
-          <div class="row">
-            <div class="col-9">
-          <input id = "city-input" 
-          type="search" 
-          id = "form1"
-          class = "form-control"
-          placeholder="Enter city"
-          autocomplete="off"
-          />
+        <div class="weather-app">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  id="city-input"
+                  type="search"
+                  id="form1"
+                  class="form-control"
+                  placeholder="Enter city"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
             </div>
-            <div class="col-3">
-          
-            <input 
-            type = "submit" 
-            value = "search"
-            class="btn btn-primary w-100"/>
-          </div>
-        </div>
-        </form>
+          </form>
 
-        <div class="overview">
-      <h1 id="city"></h1>
-      <ul>
-        <li>Last Updated: <span id="date"></span></li>
-        <li id = "description"></li>
-      </ul>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <div class="clearfix weather-temperature">
-          <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" 
-          alt="Clear" 
-          id= "icon" 
-          class="float-left"/>
-          <div class="float-left">
-            <strong id ="temperature"></strong>
-          <span class"units">
-            <a href ="#" id="fahrenheit-link">°F |  
-            <a href ="#" id=celsius-link""> °C </a></span>
-        </div>
-      </div>
-    </div>
-          <div class="col-6">
+          <div class="overview">
+            <h1 id="city"></h1>
             <ul>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span>%</li>
+              <li>Last Updated: <span id="date"></span></li>
+              <li id="description"></li>
             </ul>
-        </div>
-      </div>
-        <div class="weather-forecast" id="forecast">
-      <div class="row">
-        <div class = "col-2">
-          <div class="weather-forecast-date">Sun</div>
-          <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt = "" width="42"/>
-          <div class="weather-forecast-temperatures">
-            <span class="weather-forecast-temperature-max">18°</span>
-            <span class="weather-forecast-temperature-min">12</span>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="Clear"
+                  id="icon"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <strong id="temperature"></strong>
+                  <span class="units">
+                    <a href="#" id="celsius-link" class="active">°C</a>|
+                    <a href="#" id="farenheit-link"> °F </a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>km/h</li>
+              </ul>
+            </div>
+          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
-      </div>
-      </div>
-    </div>
 
-
-   
-    
-    
-    
-    <small>
-      <a href="https://github.com/leveugenio/my-weather-app.git"> 
-      Open Source</a> by Levanna Eugenio
-    </small> 
-    </div>
+        <small>
+          <a href="https://github.com/leveugenio/my-weather-app.git">
+            Open Source</a
+          >
+          by Levanna Eugenio
+        </small>
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>
