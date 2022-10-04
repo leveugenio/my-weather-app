@@ -51,7 +51,6 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
 }
 
 function getForecast(coordinates) {
@@ -99,20 +98,20 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function displayFarenheitTemperature(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
 
   celsiusLink.classList.remove("active");
-  farenheitLink.classList.add("active");
-  let farenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(farenheiTemperature);
+  fahrenheitLink.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
-  farenheitLink.classList.remove("active");
+  fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
@@ -122,10 +121,10 @@ let celsiusTemperature = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click, displayFarenheitTemperature");
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("celcius-link");
+let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Las Vegas");
