@@ -48,7 +48,9 @@ function displayForecast(response) {
                 forecastDay.dt
               )}</div>
               <img
-                src="http://openweathermap.org/img/wn/50d@2x.png"
+                src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png"
                 alt=""
                 width="42"
               />
